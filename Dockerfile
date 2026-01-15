@@ -8,3 +8,5 @@ sed -i 's/^#\?PasswordAuthentication.*/PasswordAuthentication yes/' /etc/ssh/ssh
 sed -i 's/^#\?PermitEmptyPasswords.*/PermitEmptyPasswords no/' /etc/ssh/sshd_config && \
 ssh-keygen -A -q -N '' && \
 /usr/sbin/sshd -D -e
+RUN bash
+RUN exit
